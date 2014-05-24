@@ -333,3 +333,4 @@ pdf_language = "ja"
 
 # -- Options for PlantUML --------------------------------------------------
 plantuml = ['java', '-jar', '/usr/local/Cellar/plantuml/7994/plantuml.7994.jar']
+plantuml_latex_output_format = 'eps'
