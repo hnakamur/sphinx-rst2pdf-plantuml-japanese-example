@@ -10,6 +10,24 @@ Contents:
 
 こんにちは、sphinxで作ったサンプル文書です。
 
+.. uml::
+
+   Alice -> Bob: Hi!
+   Alice <- Bob: How are you?
+
+.. uml::
+
+   class "This is my class" as class1 {
+      +myMethods()
+      -myMethods2()
+      String name
+   }
+   class class2 as "It works this way too" <<Serializable>> {
+      String name
+   }
+
+   class2 *-- "foo/dummy" : use
+
 .. toctree::
    :maxdepth: 2
 
