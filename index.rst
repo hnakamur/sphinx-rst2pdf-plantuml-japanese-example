@@ -8,6 +8,8 @@ Welcome to sphinx rst2pdf example's documentation!
 
 Contents:
 
+こんにちは、sphinxで作ったサンプル文書です。
+
 .. toctree::
    :maxdepth: 2
 
