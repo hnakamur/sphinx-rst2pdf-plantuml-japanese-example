@@ -1,0 +1,295 @@
+(env)% make latexpdfja
+sphinx-build -b latex -d _build/doctrees   . _build/latex
+Making output directory...
+Running Sphinx v1.2.2
+loading pickled environment... done
+building [latex]: all documents
+updating environment: [config changed] 7 added, 0 changed, 0 removed
+reading sources... [100%] index
+/Users/hnakamur/sandbox/sphinx/sphinx-rst2pdf-ja-example/env/lib/python2.7/site-packages/sphinx/ext/autosummary/templates/autosummary/base.rst:4: ERROR: Error in "currentmodule" directive:
+maximum 1 argument(s) allowed, 3 supplied.
+
+.. currentmodule:: {{ module }}
+/Users/hnakamur/sandbox/sphinx/sphinx-rst2pdf-ja-example/env/lib/python2.7/site-packages/sphinx/ext/autosummary/templates/autosummary/class.rst:4: ERROR: Error in "currentmodule" directive:
+maximum 1 argument(s) allowed, 3 supplied.
+
+.. currentmodule:: {{ module }}
+/Users/hnakamur/sandbox/sphinx/sphinx-rst2pdf-ja-example/env/lib/python2.7/site-packages/sphinx/ext/autosummary/templates/autosummary/class.rst:6: ERROR: Unknown directive type "autoclass".
+
+.. autoclass:: {{ objname }}
+
+   {% block methods %}
+   .. automethod:: __init__
+
+   {% if methods %}
+   .. rubric:: Methods
+
+   .. autosummary::
+   {% for item in methods %}
+      ~{{ name }}.{{ item }}
+   {%- endfor %}
+   {% endif %}
+   {% endblock %}
+
+   {% block attributes %}
+   {% if attributes %}
+   .. rubric:: Attributes
+
+   .. autosummary::
+   {% for item in attributes %}
+      ~{{ name }}.{{ item }}
+   {%- endfor %}
+   {% endif %}
+   {% endblock %}
+/Users/hnakamur/sandbox/sphinx/sphinx-rst2pdf-ja-example/env/lib/python2.7/site-packages/sphinx/ext/autosummary/templates/autosummary/module.rst:4: ERROR: Unknown directive type "automodule".
+
+.. automodule:: {{ fullname }}
+
+   {% block functions %}
+   {% if functions %}
+   .. rubric:: Functions
+
+   .. autosummary::
+   {% for item in functions %}
+      {{ item }}
+   {%- endfor %}
+   {% endif %}
+   {% endblock %}
+
+   {% block classes %}
+   {% if classes %}
+   .. rubric:: Classes
+
+   .. autosummary::
+   {% for item in classes %}
+      {{ item }}
+   {%- endfor %}
+   {% endif %}
+   {% endblock %}
+
+   {% block exceptions %}
+   {% if exceptions %}
+   .. rubric:: Exceptions
+
+   .. autosummary::
+   {% for item in exceptions %}
+      {{ item }}
+   {%- endfor %}
+   {% endif %}
+   {% endblock %}
+looking for now-outdated files... none found
+pickling environment... done
+checking consistency... /Users/hnakamur/sandbox/sphinx/sphinx-rst2pdf-ja-example/env/lib/python2.7/site-packages/Sphinx-1.2.2.dist-info/DESCRIPTION.rst:: WARNING: document isn't included in any toctree
+/Users/hnakamur/sandbox/sphinx/sphinx-rst2pdf-ja-example/env/lib/python2.7/site-packages/pip-1.5.6.dist-info/DESCRIPTION.rst:: WARNING: document isn't included in any toctree
+/Users/hnakamur/sandbox/sphinx/sphinx-rst2pdf-ja-example/env/lib/python2.7/site-packages/setuptools-3.6.dist-info/DESCRIPTION.rst:: WARNING: document isn't included in any toctree
+/Users/hnakamur/sandbox/sphinx/sphinx-rst2pdf-ja-example/env/lib/python2.7/site-packages/sphinx/ext/autosummary/templates/autosummary/base.rst:: WARNING: document isn't included in any toctree
+/Users/hnakamur/sandbox/sphinx/sphinx-rst2pdf-ja-example/env/lib/python2.7/site-packages/sphinx/ext/autosummary/templates/autosummary/class.rst:: WARNING: document isn't included in any toctree
+/Users/hnakamur/sandbox/sphinx/sphinx-rst2pdf-ja-example/env/lib/python2.7/site-packages/sphinx/ext/autosummary/templates/autosummary/module.rst:: WARNING: document isn't included in any toctree
+done
+processing sphinxrst2pdfexample.tex... index
+resolving references...
+writing... done
+copying TeX support files...
+done
+build succeeded, 10 warnings.
+Running LaTeX files through platex and dvipdfmx...
+make -C _build/latex all-pdf-ja
+for f in *.pdf *.png *.gif *.jpg *.jpeg; do extractbb $f; done
+
+** WARNING ** Can't find file (*.pdf)...skipping
+
+
+** WARNING ** Can't find file (*.gif)...skipping
+
+
+** WARNING ** Can't find file (*.jpg)...skipping
+
+
+** WARNING ** Can't find file (*.jpeg)...skipping
+
+for f in *.tex; do platex -kanji=utf8  $f; done
+This is e-pTeX, Version 3.1415926-p3.4-110825-2.6 (utf8.euc) (TeX Live 2013)
+ restricted \write18 enabled.
+entering extended mode
+(./sphinxrst2pdfexample.tex
+pLaTeX2e <2006/11/10> (based on LaTeX2e <2011/06/27> patch level 0)
+Babel <3.9k> and hyphenation patterns for 78 languages loaded.
+(./sphinxmanual.cls
+Document Class: sphinxmanual 2009/06/02 Document class (Sphinx manual)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/report.cls
+Document Class: report 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/size10.clo)))
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/inputenc.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/utf8.def
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/t1enc.dfu)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/ot1enc.dfu)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/omsenc.dfu)))
+(/usr/local/texlive/2013/texmf-dist/tex/latex/cmap/cmap.sty
+
+Package cmap Warning: pdftex not detected - exiting.
+
+) (/usr/local/texlive/2013/texmf-dist/tex/latex/base/fontenc.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/t1enc.def))
+(/usr/local/texlive/2013/texmf-dist/tex/generic/babel/babel.sty
+(/usr/local/texlive/2013/texmf-dist/tex/generic/babel-english/english.ldf
+(/usr/local/texlive/2013/texmf-dist/tex/generic/babel/babel.def)))
+(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/times.sty) (./fncychap.sty
+) (/usr/local/texlive/2013/texmf-dist/tex/latex/tools/longtable.sty)
+(./sphinx.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/textcomp.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/ts1enc.def
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/ts1enc.dfu)))
+(/usr/local/texlive/2013/texmf-dist/tex/latex/fancybox/fancybox.sty
+Style option: `fancybox' v1.4 <2010/05/15> (tvz)
+) (/usr/local/texlive/2013/texmf-dist/tex/latex/titlesec/titlesec.sty)
+(./tabulary.sty (/usr/local/texlive/2013/texmf-dist/tex/latex/tools/array.sty))
+ (/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/makeidx.sty)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/framed/framed.sty)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/ifthen.sty)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/color.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/color.cfg)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/dvips.def)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/dvipsnam.def))
+(/usr/local/texlive/2013/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Style option: `fancyvrb' v2.7a, with DG/SPQR fixes, and firstline=lastline fix
+<2008/02/07> (tvz)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/keyval.sty))
+(/usr/local/texlive/2013/texmf-dist/tex/latex/threeparttable/threeparttable.sty
+) (/usr/local/texlive/2013/texmf-dist/tex/latex/mdwtools/footnote.sty)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/wrapfig/wrapfig.sty)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/parskip/parskip.sty)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/alltt.sty)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2013/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/graphics.cfg)))
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/atbegshi.sty
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/infwarerr.sty)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ltxcmds.sty)
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+
+Package ifpdf Warning: Someone has redefined \pdfoutput.
+
+)) (/usr/local/texlive/2013/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty))
+(/usr/local/texlive/2013/texmf-dist/tex/generic/ifxetex/ifxetex.sty)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/auxhook.sty)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/kvoptions.sty)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/latexconfig/hyperref.cfg)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/url/url.sty))
+
+Package hyperref Message: Driver (default): hdvips.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/hyperref/hdvips.def
+(/usr/local/texlive/2013/texmf-dist/tex/latex/hyperref/pdfmark.def
+
+Package hyperref Warning: You have enabled option `breaklinks'.
+(hyperref)                But driver `hdvips.def' does not suppport this.
+(hyperref)                Expect trouble with the link areas of broken links.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty)))
+(/usr/local/texlive/2013/texmf-dist/tex/latex/oberdiek/hypcap.sty))
+(/usr/local/texlive/2013/texmf-dist/tex/latex/multirow/multirow.sty)
+Writing index file sphinxrst2pdfexample.idx
+No file sphinxrst2pdfexample.aux.
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/ts1cmr.fd)
+(I search kanjifont definition file: . . ) (I search font definition file: . .
+. . . . . ) (/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/t1ptm.fd)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2013/texmf-dist/tex/generic/oberdiek/gettitlestring.sty))
+
+Package hyperref Warning: Rerun to get /PageLabels entry.
+
+(I search kanjifont definition file: . . ) (I search font definition file: . .
+. . . . . ) (/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/t1phv.fd)
+
+LaTeX Font Warning: Font shape `JT1/gt/m/it' undefined
+(Font)              using `JT1/gt/m/n' instead on input line 120.
+
+
+LaTeX Font Warning: Font shape `JY1/gt/m/it' undefined
+(Font)              using `JY1/gt/m/n' instead on input line 120.
+
+
+LaTeX Font Warning: Font shape `JT1/gt/bx/it' undefined
+(Font)              using `JT1/gt/bx/n' instead on input line 120.
+
+
+LaTeX Font Warning: Font shape `JY1/gt/bx/it' undefined
+(Font)              using `JY1/gt/bx/n' instead on input line 120.
+
+[1] [2]
+Adding blank page after the table of contents.
+[1] [2]
+
+! LaTeX Error: Cannot determine size of graphic in plantuml-b363782ecb29c916f09
+3d4b8058b5c466eb18d29.png (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...
+
+l.128 ...782ecb29c916f093d4b8058b5c466eb18d29.png}
+
+?
+<plantuml-b363782ecb29c916f093d4b8058b5c466eb18d29.png>
+
+! LaTeX Error: Cannot determine size of graphic in plantuml-b363782ecb29c916f09
+3d4b8058b5c466eb18d29.png (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...
+
+l.128 ...782ecb29c916f093d4b8058b5c466eb18d29.png}
+
+?
+<plantuml-b363782ecb29c916f093d4b8058b5c466eb18d29.png>
+
+! LaTeX Error: Cannot determine size of graphic in plantuml-44aea54a776cc1ee9ec
+1694b004ca904084505ab.png (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...
+
+l.130 ...a54a776cc1ee9ec1694b004ca904084505ab.png}
+
+?
+<plantuml-44aea54a776cc1ee9ec1694b004ca904084505ab.png>
+
+! LaTeX Error: Cannot determine size of graphic in plantuml-44aea54a776cc1ee9ec
+1694b004ca904084505ab.png (no BoundingBox).
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...
+
+l.130 ...a54a776cc1ee9ec1694b004ca904084505ab.png}
+
+?
+<plantuml-44aea54a776cc1ee9ec1694b004ca904084505ab.png> [1] [2]
+Chapter 1.
+(/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/ts1ptm.fd)
+No file sphinxrst2pdfexample.ind.
+[3] (./sphinxrst2pdfexample.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ )
+Output written on sphinxrst2pdfexample.dvi (7 pages, 7492 bytes).
+Transcript written on sphinxrst2pdfexample.log.
+make[1]: *** [all-pdf-ja] Error 1
+make: *** [latexpdfja] Error 2
