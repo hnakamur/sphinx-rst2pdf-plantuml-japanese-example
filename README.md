@@ -63,3 +63,9 @@ make pdf
 ```
 open _build/pdf/MyProject.pdf
 ```
+
+## Thanks to
+
+* [rst2pdf拡張を使ったPDFファイル作成 — Python製ドキュメンテーションビルダー、Sphinxの日本ユーザ会](http://sphinx-users.jp/cookbook/pdf/rst2pdf.html)
+* [(6日目) Sphinx 拡張の紹介 - Hack like a rolling stone](http://tk0miya.hatenablog.com/entry/20111206/p1)
+* [p.26](http://www.slideshare.net/TakeshiKomiya/sphinx-2013/26) in [Sphinx ではじめるドキュメント生活 2013 #sphinxconjp](http://www.slideshare.net/TakeshiKomiya/sphinx-2013)
